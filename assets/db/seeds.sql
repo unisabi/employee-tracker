@@ -1,7 +1,7 @@
 use tracker;
 
 insert into department
-    (name) 
+    (tracker) 
 values
     ('HR'),
     ('Sales'),
@@ -17,6 +17,11 @@ values
 insert into employee
     (first_name,last_name,role_id,manager_id)
 values
-    ('John','Doe',1,null),
+    ('John','Doe',1,1),
     ('Betty','White',2,1),
-    ('Douglus','Smith',3,1);
+    ('Douglus','Smith',3,1),
+    ('Micah', 'Henley'4,4),
+    ('Daniel', 'Jacobs'5,5),
+    ('Chole', 'Clover'6,6),
+    ('Susan', 'Sherri'7,7),
+    ('Rick', 'Rift' 8,8);
