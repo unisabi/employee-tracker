@@ -73,7 +73,7 @@ const db = require('./assets/db/connection');
           break;
         case "Chole Clover":
           break;
-        case "SUsan Sherri":
+        case "Susan Sherri":
           break;
         case "Rick Raft":
           break; 

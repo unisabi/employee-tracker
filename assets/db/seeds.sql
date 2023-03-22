@@ -29,4 +29,4 @@ values
     ('Daniel', 'Jacobs', 5, NULL),
     ('Chole', 'Clover', 6, NULL),
     ('Susan', 'Sherri', 7, NULL),
-    ('Rick', 'Rift', 8, NULL);
+    ('Rick', 'Rift', 5, NULL);
