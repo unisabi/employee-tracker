@@ -37,13 +37,16 @@ const db = require('./assets/db/connection');
   };
   
   const viewDpt = async () => {
-    db.query("SELECT id as DepartmentID, dept_name as DepartmentName FROM department", function (err, results, fields) {
+    db.query("SELECT * FROM department", function (err, results) {
+      if(err) throw err;
       console.log(results);
+      init()
     });
   };
   const viewRole = async () => {
-    db.query("select * from roles", function (err, results){
+    db.query("select * from role", function (err, results){
       console.log(results)
+      init()
     });
   };
   const addDpt = async () => {
@@ -85,9 +88,9 @@ const db = require('./assets/db/connection');
   };
   
   async function init() {
-    var data = await promptUser(questions.menu);
-
-    switch (data.action) {
+   inquirer.prompt(questions.menu).then(data=>{
+    console.log(data)
+    switch (data.task) {
       case "view all departments":
         viewDpt();
   
@@ -101,7 +104,7 @@ const db = require('./assets/db/connection');
       case "add an employee":
         addEmpl();
         break;
-      case "view all roles":
+        case "view all roles":
         viewRole();
         break;
       case "add a department":
@@ -110,9 +113,12 @@ const db = require('./assets/db/connection');
       case "update an employee role":
         updateEmpl();
         break;
-          
+      default:
+        db.end()
+        process.exit(0)
             
     }
-    return;
+  })
+  
   }
 init();

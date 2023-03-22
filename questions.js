@@ -13,6 +13,7 @@ const questions = {
       "add a role",
       "add an employee",
       "update an employee role",
+      "exit app"
     ],
 
     validate: (value) => {
