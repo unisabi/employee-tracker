@@ -1,27 +1,32 @@
-use tracker;
+use trackerTable;
 
 insert into department
-    (tracker) 
+    (name) 
 values
-    ('HR'),
     ('Sales'),
-    ('Engineering');
+    ('Engineering'),
+    ('Fiance'),
+    ('Legal');
 
 insert into role
     (title,salary,department_id)
 values
-    ('manager',80000,1),
-    ('sales rep', 60000,2),
-    ('engineer', 70000,3);
+    ('Sales Lead', 1000000, 1),
+    ('Salesperson',80000, 1),
+    ('Lead Engineer', 120000, 2),
+    ('Account Manager', 160000, 3),
+    ('Accountant', 125000, 3),
+    ('Legal Team Lead', 250000, 4),
+    ('Lawyer', 190000, 4);
 
 insert into employee
     (first_name,last_name,role_id,manager_id)
 values
-    ('John','Doe',1,1),
-    ('Betty','White',2,1),
-    ('Douglus','Smith',3,1),
-    ('Micah', 'Henley'4,4),
-    ('Daniel', 'Jacobs'5,5),
-    ('Chole', 'Clover'6,6),
-    ('Susan', 'Sherri'7,7),
-    ('Rick', 'Rift' 8,8);
+    ('John','Doe', 1, NULL),
+    ('Betty','White', 2, NULL),
+    ('Douglus','Smith', 3, NULL),
+    ('Micah', 'Henley', 4, NULL),
+    ('Daniel', 'Jacobs', 5, NULL),
+    ('Chole', 'Clover', 6, NULL),
+    ('Susan', 'Sherri', 7, NULL),
+    ('Rick', 'Rift', 8, NULL);
