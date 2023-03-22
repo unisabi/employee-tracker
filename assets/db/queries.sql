@@ -1,0 +1,4 @@
+use trackerTable;
+select * from department;
+select * from role;
+select * from employee;

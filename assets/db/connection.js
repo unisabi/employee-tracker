@@ -4,7 +4,7 @@ const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: 'cherry',
-    database: 'tracker'
+    database: 'trackerTable'
 });
 
 db.connect();
