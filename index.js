@@ -10,13 +10,14 @@ const db = require('./assets/db/connection');
   
   const addRole = async () => {
       
-      db.query("select dept_name as name, id as value from department", async function (err, results) {
+      db.query("select dept_name, id as value from department", async function (err, results) {
           var data = await promptUser(questions.addRole(results))
           console.log(data)
-          
+          db.query(addRole)
           if(err){
               console.log(err)
           }
+          init()
         });
   };
   const addEmpl = async () => {
@@ -28,11 +29,13 @@ const db = require('./assets/db/connection');
         if(err){
             console.log(err)
         }
+        init()
       });
   };
   const viewEmployees = async () =>{
     db.query("SELECT * FROM employee", function (err, results, fields) {
       console.log(results);
+      init()
     });
   };
   
@@ -56,6 +59,7 @@ const db = require('./assets/db/connection');
       if(err){
         console.log(err)
       }
+      init()
     });
   };
   const updateEmpl = async () => {
