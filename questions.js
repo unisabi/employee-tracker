@@ -54,9 +54,27 @@ const questions = {
       {
         type: "input",
         message: "Enter the department name:",
-        name: "dept_name",
+        name: "department_id",
       },
-    ];
+      // {
+      //   type: "list",
+      //   name: "department",
+      //   choices: departments,
+      //   message: "which department is this role in?"
+      // },
+      {
+      type: "input",
+      message: "Insert title of new role",
+      name: "title",
+
+    },
+    {
+      type: "input",
+      message: "what is the salary of the new role?",
+      name: "salary",
+
+    },
+  ];
     
   },
   updateEmpl() {
