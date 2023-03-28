@@ -25,7 +25,7 @@ const questions = {
     },
   },
 
-  addEmpl() {
+  addEmpl(roles, managers) {
     return [
       {
         type: "input",
@@ -38,14 +38,16 @@ const questions = {
         name: "last_name",
       },
       {
-        type: "input",
-        message: "Role id of the employee?",
-        name: "role",
+        type: "list",
+        message: "Role of the employee?",
+        name: "role_id",
+        choices: roles
       },
       {
-        type: "input",
-        message: "Manager id of the employee?",
+        type: "list",
+        message: "Manager of the employee?",
         name: "manager_id",
+        choices: managers
       },
     ];
   },
@@ -54,26 +56,8 @@ const questions = {
       {
         type: "input",
         message: "Enter the department name:",
-        name: "department_id",
-      },
-      // {
-      //   type: "list",
-      //   name: "department",
-      //   choices: departments,
-      //   message: "which department is this role in?"
-      // },
-      {
-      type: "input",
-      message: "Insert title of new role",
-      name: "title",
-
-    },
-    {
-      type: "input",
-      message: "what is the salary of the new role?",
-      name: "salary",
-
-    },
+        name: "name",
+      }
   ];
     
   },
